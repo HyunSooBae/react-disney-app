@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import useOnClickOutside from '../../hooks/useOnClickOutside'
-import './MovieModal.css'
+import useOnClickOutside from '../../hooks/useOnClickOutside';
+import './MovieModal.css';
 
 const MovieModal = ({
   backdrop_path,
@@ -13,7 +13,8 @@ const MovieModal = ({
   setModalOpen
 }) => {
 
-  const ref = useRef(null)
+  const ref = useRef(null);
+
   useOnClickOutside(ref, () => setModalOpen(false))
 
   return (
@@ -33,8 +34,8 @@ const MovieModal = ({
             alt="modal__poster-img"
           />
 
-          <div className='modal-content'>
-            <p className='modal-details'>
+          <div className='modal__content'>
+            <p className='modal__details'>
               <span className='modal__user_perc'>100% for you</span>
               {" "} {release_date ? release_date : first_air_date}
             </p>
